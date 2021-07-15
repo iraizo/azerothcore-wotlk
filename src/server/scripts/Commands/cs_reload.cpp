@@ -329,7 +329,7 @@ public:
 
     static bool HandleReloadDungeonAccessCommand(ChatHandler* handler, const char* /*args*/)
     {
-        LOG_INFO("server.loading", "Re-Loading Dungeon Access Requirement definitions...");
+        LOG_INFO("server.loading", "Re-Loading Dungeon Access Template rows...");
         sObjectMgr->LoadAccessRequirements();
         handler->SendGlobalGMSysMessage("DB tables `dungeon_access_template` AND `dungeon_access_requirements` reloaded.");
         return true;
@@ -361,7 +361,7 @@ public:
 
     static bool HandleReloadAreaTriggerCommand(ChatHandler* handler, const char* /*args*/)
     {
-        LOG_INFO("server.loading", "Re-Loading Area Trigger definitions...");
+        LOG_INFO("server.loading", "Re-Loading Area Trigger rows...");
         sObjectMgr->LoadAreaTriggers();
         handler->SendGlobalGMSysMessage("DB table `areatrigger` reloaded.");
         return true;
@@ -369,7 +369,7 @@ public:
 
     static bool HandleReloadAreaTriggerTeleportCommand(ChatHandler* handler, const char* /*args*/)
     {
-        LOG_INFO("server.loading", "Re-Loading Area Trigger teleport definitions...");
+        LOG_INFO("server.loading", "Re-Loading Area Trigger teleport rows...");
         sObjectMgr->LoadAreaTriggerTeleports();
         handler->SendGlobalGMSysMessage("DB table `areatrigger_teleport` reloaded.");
         return true;
@@ -401,7 +401,7 @@ public:
 
     static bool HandleReloadOnKillReputationCommand(ChatHandler* handler, const char* /*args*/)
     {
-        LOG_INFO("server.loading", "Re-Loading creature award reputation definitions...");
+        LOG_INFO("server.loading", "Re-Loading creature award reputation rows...");
         sObjectMgr->LoadReputationOnKill();
         handler->SendGlobalGMSysMessage("DB table `creature_onkill_reputation` reloaded.");
         return true;
@@ -515,7 +515,7 @@ public:
     {
         LOG_INFO("server.loading", "Re-Loading Quest Templates...");
         sObjectMgr->LoadQuests();
-        handler->SendGlobalGMSysMessage("DB table `quest_template` (quest definitions) reloaded.");
+        handler->SendGlobalGMSysMessage("DB table `quest_template` (quest rows) reloaded.");
 
         /// dependent also from `gameobject` but this table not reloaded anyway
         LOG_INFO("server.loading", "Re-Loading GameObjects for quests...");
@@ -821,7 +821,7 @@ public:
 
     static bool HandleReloadSpellTargetPositionCommand(ChatHandler* handler, const char* /*args*/)
     {
-        LOG_INFO("server.loading", "Re-Loading Spell target coordinates...");
+        LOG_INFO("server.loading", "Re-Loading spell_target_position rows...");
         sSpellMgr->LoadSpellTargetPositions();
         handler->SendGlobalGMSysMessage("DB table `spell_target_position` (destination coordinates for spell targets) reloaded.");
         return true;
@@ -829,9 +829,9 @@ public:
 
     static bool HandleReloadSpellThreatsCommand(ChatHandler* handler, const char* /*args*/)
     {
-        LOG_INFO("server.loading", "Re-Loading Aggro Spells Definitions...");
+        LOG_INFO("server.loading", "Re-Loading spell threat rows...");
         sSpellMgr->LoadSpellThreats();
-        handler->SendGlobalGMSysMessage("DB table `spell_threat` (spell aggro definitions) reloaded.");
+        handler->SendGlobalGMSysMessage("DB table `spell_threat` (spell aggro rows) reloaded.");
         return true;
     }
 
@@ -839,7 +839,7 @@ public:
     {
         LOG_INFO("server.loading", "Re-Loading Spell Group Stack Rules...");
         sSpellMgr->LoadSpellGroupStackRules();
-        handler->SendGlobalGMSysMessage("DB table `spell_group_stack_rules` (spell stacking definitions) reloaded.");
+        handler->SendGlobalGMSysMessage("DB table `spell_group_stack_rules` (spell stacking rows) reloaded.");
         return true;
     }
 
