@@ -11,6 +11,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     name: check codestyle
     steps:
+      - name: check core codestyle
       - uses: actions/checkout@v2
-      - name: Check core codestyle
         run: source ./apps/ci/ci-codestyle.sh
+      - name: check clang format
+      - uses: wolletd/clang-format-checker@v1
+        with: 
+        target-ref: master
