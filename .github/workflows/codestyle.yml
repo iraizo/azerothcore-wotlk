@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: check core codestyle 
         run: source ./apps/ci/ci-codestyle.sh
-        
+      
+      - name: check format
       - uses: wolletd/clang-format-checker@v1
         with:
           target-ref: master
-      - name: check format
