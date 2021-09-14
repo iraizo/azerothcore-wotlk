@@ -17,8 +17,7 @@
 ////// ITEMS FIXES, BASIC STUFF
 ///////////////////////////////////////
 
-enum eTrickSpells
-{
+enum eTrickSpells {
     SPELL_PIRATE_COSTUME_MALE           = 24708,
     SPELL_PIRATE_COSTUME_FEMALE         = 24709,
     SPELL_NINJA_COSTUME_MALE            = 24710,
