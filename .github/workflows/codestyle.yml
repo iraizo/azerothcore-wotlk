@@ -16,6 +16,6 @@ jobs:
         run: source ./apps/ci/ci-codestyle.sh
       
       - name: check format
-      - uses: wolletd/clang-format-checker@v1
+        uses: wolletd/clang-format-checker@v1
         with:
           target-ref: master
