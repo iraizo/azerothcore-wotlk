@@ -41,8 +41,7 @@ public:
     {
         PrepareSpellScript(spell_hallows_end_trick_SpellScript);
 
-        void HandleScript(SpellEffIndex /*effIndex*/)
-        {
+        void HandleScript(SpellEffIndex /*effIndex*/) {
             if (Player* target = GetHitPlayer())
             {
                 uint8 gender = target->getGender();
